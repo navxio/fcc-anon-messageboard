@@ -37,6 +37,11 @@ const threadSchema = new mongoose.Schema({
       default: false,
     },
   }],
+}, {
+  timestamps: {
+    createdAt: 'created_on',
+    updatedAt: 'bumped_on',
+  },
 });
 
 module.exports = mongoose.model('Thread', threadSchema);
