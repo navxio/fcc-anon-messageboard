@@ -8,12 +8,9 @@
 
 'use strict';
 
-var expect = require('chai').expect;
+const { expect } = require('chai');
 
-module.exports = function (app) {
-  
+module.exports = function myapp(app) {
   app.route('/api/threads/:board');
-    
   app.route('/api/replies/:board');
-
 };
